@@ -4,14 +4,14 @@ dot-vim
 Verrol's .vim repo
 ------------------
 
-### Installation
+### Installation:
   Open terminal or prompt in your home directory. Then execute the following command.
   % git clone https://github.com/verrol/dot-vim.git .vim
 
-#### Setup
-  % cd .vim
-  % git submodule init
-  % git submodule update
+#### Setup:
+   % cd .vim
+   % git submodule init
+   % git submodule update
 
 ##### NON-Windows Users:
     % ln -s ~/.vim/vimrc ~/.vimrc
