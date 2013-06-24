@@ -10,9 +10,9 @@
 [submodule "bundle/tabular"]
 	path = bundle/tabular
 	url = https://github.com/godlygeek/tabular.git
-[submodule "bundle/better-snipmate-snippets"]
-	path = bundle/better-snipmate-snippets
-	url = git://github.com/bartekd/better-snipmate-snippets.git
 [submodule "vim-easymotion"]
 	path = vim-easymotion
 	url = git://github.com/Lokaltog/vim-easymotion.git
+[submodule "bundle/ultisnips"]
+	path = bundle/ultisnips
+	url = https://github.com/SirVer/ultisnips
