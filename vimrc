@@ -1,4 +1,5 @@
 call pathogen#infect() 
+call pathogen#helptags()
 
 "main settings
 set tabstop=2 shiftwidth=2 textwidth=100
