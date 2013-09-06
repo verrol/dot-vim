@@ -52,14 +52,17 @@ set gdefault
 set ignorecase
 
 " save files often, just do so with ';;'
-nnoremap <leader>;  :wa<cr>
+nnoremap <leader>;  :wa<CR>
+
+" quit VIM, save all and exit
+nnoremap <leader>wq :qwall<CR>
 
 " make vim search work like Perl regex
 nnoremap / /\v
 vnoremap / /\v
 
 " remove highlight from search after you find what you want
-nnoremap <leader><space> :noh<cr>
+nnoremap <leader><space> :noh<CR>
 
 " press tab in command or visual mode to find matching pairs instead of typing '%'
 nnoremap <tab> %
@@ -76,7 +79,7 @@ set list
 set listchars=tab:▸\ ,eol:¬
 
 " toggle 'list' command
-nmap <leader>l :set list!<cr>
+nmap <leader>l :set list!<CR>
 
 " disable arrow kesys and make j and k move in 'screen lines' instead of 'file lines"
 nnoremap <up> <nop>
@@ -104,6 +107,12 @@ au FocusLost * :wa
 " bring up Ack plugin
 nnoremap <leader>a :Ack
 
+" toggle rainbow color plugin
+nnoremap <leader>rp :ToggleRaibowParenthesis<CR>
+
+" start NERDTree
+nnoremap <leader>nt :NERDTree<CR>
+
 " This next mapping imitates TextMates Ctrl+Q function to re-hardwrap paragraphs of text:
 nnoremap <leader>q gqip
 
@@ -111,11 +120,11 @@ nnoremap <leader>q gqip
 nnoremap <leader>v V`]
 
 " quickly open ~/.vimrc file in a vertically split window
-nnoremap <leader>ev <C-w><C-v><C-l>:e $MYVIMRC<cr>
+nnoremap <leader>ev <C-w><C-v><C-l>:e $MYVIMRC<CR>
 
 " show previous yanks with YankRing plugin
-nnoremap <silent> <F3> :YRShow<cr>
-inoremap <silent> <F3> <ESC>:YRShow<cr>
+nnoremap <silent> <F3> :YRShow<CR>
+inoremap <silent> <F3> <ESC>:YRShow<CR>
 
 
 if exists(":Tabularize")
