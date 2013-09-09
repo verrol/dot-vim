@@ -54,8 +54,11 @@ set ignorecase
 " save files often, just do so with ';;'
 nnoremap <leader>;  :wa<CR>
 
+" save current buffer and close it, quit VIM if last buffer
+nnoremap <leader>q :<Z><Z><CR>
+
 " quit VIM, save all and exit
-nnoremap <leader>wq :qwall<CR>
+nnoremap <leader>qa :qwall<CR>
 
 " make vim search work like Perl regex
 nnoremap / /\v
@@ -104,15 +107,6 @@ vnoremap <F1> <ESC>
 " save current buffer on losing focus
 au FocusLost * :wa
 
-" bring up Ack plugin
-nnoremap <leader>a :Ack
-
-" toggle rainbow color plugin
-nnoremap <leader>rp :ToggleRaibowParenthesis<CR>
-
-" start NERDTree
-nnoremap <leader>nt :NERDTree<CR>
-
 " This next mapping imitates TextMates Ctrl+Q function to re-hardwrap paragraphs of text:
 nnoremap <leader>q gqip
 
@@ -122,10 +116,20 @@ nnoremap <leader>v V`]
 " quickly open ~/.vimrc file in a vertically split window
 nnoremap <leader>ev <C-w><C-v><C-l>:e $MYVIMRC<CR>
 
-" show previous yanks with YankRing plugin
-nnoremap <silent> <F3> :YRShow<CR>
-inoremap <silent> <F3> <ESC>:YRShow<CR>
+" bring up Ack plugin
+nnoremap <leader>a :Ack
 
+" toggle rainbow color plugin
+nnoremap <leader>rp :ToggleRaibowParenthesis<CR>
+
+" start NERDTree
+nnoremap <leader>nt :NERDTree<CR>
+
+" show previous yanks with YankRing plugin
+nnoremap <leader>yr :YRShow<CR>
+
+" set EasyMotion trigger to <leader> instead of <leader><leader>
+let g:EasyMotion_leader_key = '<Leader>'
 
 if exists(":Tabularize")
   nmap <Leader>a= :Tabularize /=<CR>
