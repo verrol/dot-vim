@@ -30,8 +30,8 @@ Verrol's .vim repo
 
 ## Key Bindings
     I have setup a few key-bindings to make my life easier, feel free to change them to suite
-yourself. Things to note, I have disabled all arrow keys. That is to re-enforce the use of the much
-faster hklj (left, up, right, down)
+    yourself. Things to note, I have disabled all arrow keys. That is to re-enforce the use of the
+    much faster hklj (left, up, right, down)
 
     <leader>= ;
     <leader>;=:wa=save current file, saving me one keystroke
@@ -62,7 +62,7 @@ faster hklj (left, up, right, down)
     With DWM, you really don't need to think about how to split your windows.  It maintains a main
     window and stacks other winodws on the right.  To try it out, open a new Vim or close all but
     one window if you have some split windows (use ':close', ':q', or ':q!' if you have type
-            anything).  Now, with the cursor in the single Vim window, start editing, then in
+    anything).  Now, with the cursor in the single Vim window, start editing, then in
     command mode type '<CTRL>+<n>.  Notice now the new windows is placed, start editing in this
     second windows.  Back to command mode and type <CTRL>+<n> again.  Notice what is happening?  her
     are some other commands:
