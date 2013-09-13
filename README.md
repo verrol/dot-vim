@@ -30,20 +30,25 @@ Verrol's .vim repo
 
 ## Key Bindings
     I have setup a few key-bindings to make my life easier, feel free to change them to suite
-    yourself. Things to note, I have disabled all arrow keys. That is to re-enforce the use of the
-    much faster hklj (left, up, right, down)
+    yourself. IMPORTANT: I have disabled all arrow keys. That is to re-enforce the use of the much
+    faster hlkj (left, right, up, down).  I have also changed my <leader> key from the default of
+    '/' to ';'.  To same on some typing, use <> to mean <leader>.  When it is not the leader, say
+    CTRL-<some key>, I use <ctrl>.
 
-    <leader>= ;
-    <leader>;=:wa=save current file, saving me one keystroke
-    <leader>wq=:wqall=Write and quite, saves all buffers and quite vim, saves 4 keystroke
-    /=/\v=to use Perl's regex instead of Vim's variation
-    <leader><space>=:noh<cr>=clears hightlight search resul, nice after you find what you want
-    <tab>=%=match parenthesis, braces, etc., easier to reach and type than '%'
-    <leader>l=:set list!<cr>=toggle list command
-    <F1>=<ESC>=most likely what was being reached for since there is not F1 help in Vim
-    <leader>q=gqip=re-hard wrap paragraphs of text
-    <leader>v=V`]=re-select the text just pasted, so you can work on it
-    <leader>ev=....=Edit Vimrc, pretty long command to open .vimrc in a split window for editing.
+    <leader> = ;
+
+    Mapping    | Result         | Explaination
+    -----------+----------------+-------------------------------------------------------------
+    <>;        | :wa            | save current file, saving me one keystroke
+    <>wq       | :wqall         | Write and quite, saves all buffers and quite vim
+    /          | /\v            | use Perl's regex instead of Vim's variation
+    <><space>  | :noh<cr>       | Clear Search, after you find what you want
+    <tab>      | %              | match parenthesis, braces, etc., easier to reach and type than '%'
+    <>l        | :set list!<cr> | toggle list command
+    <F1>       | <ESC>          | most likely what was being reached for since there is not F1 help in Vim
+    <>q        | gqip           | re-hard wrap paragraphs of text
+    <>v        | V`]            | re-select the text just pasted, so you can work on it
+    <>ev       | ....           | Edit Vimrc, pretty long command to open .vimrc in a split window for editing.
 
     Key bindings that are tied to plugins, will be covered in the tutorial for the plugin.
 
@@ -67,12 +72,12 @@ Verrol's .vim repo
     second windows.  Back to command mode and type <CTRL>+<n> again.  Notice what is happening?  her
     are some other commands:
 
-    - <ctrl>+<n>:      create a new window (make it the main)
-    - <ctrl>+<c>:      close the current window
-    - <ctrl>+<j>:      move to next window clockwise
-    - <ctrl>+<k>:      move to next window counter-clockwise
-    - <ctrl>+<space>:  change foucs, make current window the main
-    - <ctrl>+<m>:      full screen, use <ctrl>+<space> to return to multiple windows
+    - <>wn              create a new window (make it the main)
+    - <>wc              close the current window
+    - <ctrl>+<j>        move to next window clockwise
+    - <ctrl>+<k>        move to next window counter-clockwise
+    - <>wf              change foucs, make current window the main
+    - <>wfs             full screen, use <ctrl>+<space> to return to multiple windows
 
 ## Rainbow Parenthesis
     This plugin uses different colors for nested brackets, parenthesis, braces, etc. This is

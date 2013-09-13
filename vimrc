@@ -119,6 +119,12 @@ nnoremap <leader>ev <C-w><C-v><C-l>:e $MYVIMRC<CR>
 " bring up Ack plugin
 nnoremap <leader>a :Ack
 
+" DWM plugin remap, else conflicts with YankRing and I don't want to remap YankRing
+nnoremap <leader>wn     :DWM_New
+nnoremap <leader>wc     :DWM_Close
+nnoremap <leader>wf     :DWM_Focus
+nnoremap <leader>wfs    :DWM_Full
+
 " toggle rainbow color plugin
 nnoremap <leader>rp :ToggleRaibowParenthesis<CR>
 
