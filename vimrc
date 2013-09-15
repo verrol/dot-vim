@@ -120,10 +120,10 @@ nnoremap <leader>ev <C-w><C-v><C-l>:e $MYVIMRC<CR>
 nnoremap <leader>a :Ack
 
 " DWM plugin remap, else conflicts with YankRing and I don't want to remap YankRing
-nnoremap <leader>wn     :DWM_New
-nnoremap <leader>wc     :DWM_Close
-nnoremap <leader>wf     :DWM_Focus
-nnoremap <leader>wfs    :DWM_Full
+nnoremap <leader>wn     :DWM_New<CR>
+nnoremap <leader>wc     :DWM_Close<CR>
+nnoremap <leader>wf     :DWM_Focus<CR>
+nnoremap <leader>wfs    :DWM_Full<CR>
 
 " toggle rainbow color plugin
 nnoremap <leader>rp :ToggleRaibowParenthesis<CR>
@@ -135,7 +135,7 @@ nnoremap <leader>nt :NERDTree<CR>
 nnoremap <leader>yr :YRShow<CR>
 
 " set EasyMotion trigger to <leader> instead of <leader><leader>
-let g:EasyMotion_leader_key = '<Leader>'
+let g:EasyMotion_leader_key = '<Leader><leader>'
 
 if exists(":Tabularize")
   nmap <Leader>= :Tabularize /=<CR>
