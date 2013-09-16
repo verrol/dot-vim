@@ -4,6 +4,7 @@ set nocompatible               " be iMproved
 filetype off
 
 let mapleader=';'
+let maplocalleader=','
 
 " Use Pathogen:
 call pathogen#runtime_append_all_bundles()
@@ -67,9 +68,9 @@ vnoremap / /\v
 " remove highlight from search after you find what you want
 nnoremap <leader><space> :noh<CR>
 
-" press tab in command or visual mode to find matching pairs instead of typing '%'
-nnoremap <tab> %
-vnoremap <tab> %
+" press tab in command or visual mode to indent
+"nnoremap <tab> <s-gt>
+"vnoremap <tab> <s-gt>
 
 " wrap long lines, but show a colored column at 85
 set wrap
@@ -82,7 +83,7 @@ set list
 set listchars=tab:▸\ ,eol:¬
 
 " toggle 'list' command
-nmap <leader>l :set list!<CR>
+nnoremap <leader>l :set list!<CR>
 
 " disable arrow kesys and make j and k move in 'screen lines' instead of 'file lines"
 nnoremap <up> <nop>
@@ -116,6 +117,9 @@ nnoremap <leader>v V`]
 " quickly open ~/.vimrc file in a vertically split window
 nnoremap <leader>ev <C-w><C-v><C-l>:e $MYVIMRC<CR>
 
+" source ~/.vimrc changes
+nnoremap <leader>sv :source $MYVIMRC<cr>
+
 " bring up Ack plugin
 nnoremap <leader>a :Ack
 
@@ -134,16 +138,16 @@ nnoremap <leader>nt :NERDTree<CR>
 " show previous yanks with YankRing plugin
 nnoremap <leader>yr :YRShow<CR>
 
-" set EasyMotion trigger to <leader> instead of <leader><leader>
+" set EasyMotion trigger to <leader><leader>
 let g:EasyMotion_leader_key = '<Leader><leader>'
 
 if exists(":Tabularize")
-  nmap <Leader>= :Tabularize /=<CR>
-  vmap <Leader>= :Tabularize /=<CR>
-  nmap <Leader>: :Tabularize /:\zs<CR>
-  vmap <Leader>: :Tabularize /:\zs<CR>
-  nmap <Leader>, :Tabularize /,\zs<CR>
-  vmap <Leader>, :Tabularize /,\zs<CR>
+  nnoremap <localleader>= :Tabularize /=<CR>
+  vnoremap <localleader>= :Tabularize /=<CR>
+  nnoremap <localleader>: :Tabularize /:\zs<CR>
+  vnoremap <localleader>: :Tabularize /:\zs<CR>
+  nnoremap <localleader>, :Tabularize /,\zs<CR>
+  vnoremap <localleader>, :Tabularize /,\zs<CR>
 endif
 
 colorscheme torte
@@ -163,3 +167,23 @@ endif
 " for DirDiff plugin - for english users
 let g:DirDiffDynamicDiffText = 1
 
+" Set UltiSnips key bindings
+let g:UltiSnipsExpandTrigger="<tab>"
+let g:UltiSnipsJumpForwardTrigger="<tab>"
+let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
+
+" configure SyntaxComplete plugin
+if has("autocmd") && exists("+omnifunc") 
+    autocmd Filetype * 
+     \  if &omnifunc == "" | 
+     \   setlocal omnifunc=syntaxcomplete#Complete | 
+     \  endif 
+endif 
+
+" configure JavaScript Library Syntax plugin
+autocmd BufReadPre *.js let b:javascript_lib_use_jquery = 1
+autocmd BufReadPre *.js let b:javascript_lib_use_angularjs = 1
+autocmd BufReadPre *.js let b:javascript_lib_use_requirejs = 1
+autocmd BufReadPre *.js let b:javascript_lib_use_underscore = 0
+autocmd BufReadPre *.js let b:javascript_lib_use_backbone = 0
+autocmd BufReadPre *.js let b:javascript_lib_use_prelude = 0

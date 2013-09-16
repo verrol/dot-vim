@@ -28,6 +28,9 @@ Verrol's .vim repo
     started, then you will at least have some idea how to use some of the plugins here before you
     start customizing by adding/removing your own.
 
+    Learn the basics or more about key mapping at
+    http://learnvimscriptthehardway.stevelosh.com/chapters/03.html
+
 ## Key Bindings
     I have setup a few key-bindings to make my life easier, feel free to change them to suite
     yourself. IMPORTANT: I have disabled all arrow keys. That is to re-enforce the use of the much
@@ -125,4 +128,19 @@ Verrol's .vim repo
 
 ## Surround
 
+## UltiSnips
+    By default, UltiSnips maps the following keys using UltiSnips variables:
+    
+    The variables with their default values are: >
+        g:UltiSnipsExpandTrigger               <tab>
+        g:UltiSnipsListSnippets                <c-tab>
+        g:UltiSnipsJumpForwardTrigger          <c-j>
+        g:UltiSnipsJumpBackwardTrigger         <c-k>
 
+    You can change the keys used, by setting the variables in your ~/.vimrc file.  For
+    example, set g:UltiSnipsExpandTrigger and g:UltiSnipsJumpForwardTrigger can be set to
+    the same value. To simulate TextMate behavior, add the following lines to your
+    vimrc file. >
+        let g:UltiSnipsExpandTrigger="<tab>"
+        let g:UltiSnipsJumpForwardTrigger="<tab>"
+        let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
