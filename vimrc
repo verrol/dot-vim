@@ -160,15 +160,17 @@ endif
 
 "global vars
 
-"inoremap <M-o>       <Esc>o
-"inoremap <C-j>       <Down>
-"let g:ragtag_global_maps = 1
+"-- inoremap <M-o>       <Esc>o
+"-- inoremap <C-j>       <Down>
+"
+let g:ragtag_global_maps = 1
 
 " for DirDiff plugin - for english users
 let g:DirDiffDynamicDiffText = 1
 
 " Set UltiSnips key bindings
 let g:UltiSnipsExpandTrigger="<tab>"
+let g:UltiSnipsListSnippets="<c-tab>"
 let g:UltiSnipsJumpForwardTrigger="<tab>"
 let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
 
