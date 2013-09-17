@@ -37,7 +37,6 @@ set showmatch
 set ruler
 set laststatus=2
 set backspace=indent,eol,start
-set noignorecase
 set encoding=utf-8
 set scrolloff=3
 set autoindent
@@ -150,7 +149,7 @@ if exists(":Tabularize")
   vnoremap <localleader>, :Tabularize /,\zs<CR>
 endif
 
-colorscheme torte
+" colorscheme torte
 
 if has("gui_running") 
 "  set gfn=DejaVu_Sans_Mono:h9:cANSI 
