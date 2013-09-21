@@ -123,10 +123,10 @@ nnoremap <leader>sv :source $MYVIMRC<cr>
 nnoremap <leader>a :Ack
 
 " DWM plugin remap, else conflicts with YankRing and I don't want to remap YankRing
-nnoremap <leader>wn     :DWM_New<CR>
-nnoremap <leader>wc     :DWM_Close<CR>
-nnoremap <leader>wf     :DWM_Focus<CR>
-nnoremap <leader>wfs    :DWM_Full<CR>
+nnoremap <leader>wn     :call DWM_New()<CR>
+nnoremap <leader>wc     :call DWM_Close()<CR>
+nnoremap <leader>wf     :call DWM_Focus()<CR>
+nnoremap <leader>wfs    :call DWM_Full()<CR>
 
 " toggle rainbow color plugin
 nnoremap <leader>rp :ToggleRaibowParenthesis<CR>
