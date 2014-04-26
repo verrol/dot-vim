@@ -75,7 +75,7 @@ nnoremap <leader><space> :noh<CR>
 set wrap
 set textwidth=100
 set formatoptions=qrn1
-set colorcolumn=95
+set colorcolumn=100
 
 " sensible visuabl characters for tab and new line
 set list
