@@ -35,7 +35,7 @@ Verrol's .vim repo
     I have setup a few key-bindings to make my life easier, feel free to change them to suite
     yourself. IMPORTANT: I have disabled all arrow keys. That is to re-enforce the use of the much
     faster hlkj (left, right, up, down).  I have also changed my <leader> key from the default of
-    '/' to ';'.  To same on some typing, use <> to mean <leader>.  When it is not the leader, say
+    '/' to ';'.  To save on some typing, use <> to mean <leader>.  When it is not the leader, say
     CTRL-<some key>, I use <ctrl>.
 
     <leader> = ;
